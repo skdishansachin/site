@@ -11,7 +11,15 @@ import "./src/styles/global.css";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
-	<body>
-		<slot />
+	<body class="mx-auto max-w-3xl px-4">
+		<main class="pb-16 pt-8 leading-relaxed sm:pt-12">
+			<slot />
+		</main>
+		<footer class="flex place-content-between py-12">
+			<p class="text-sm text-zinc-450">Copyright © Dishan Sachin</p>
+			<a href="https://github.com/skdishansachin/site" class="text-sm text-main underline hover:text-zinc-450"
+				>Source code</a
+			>
+		</footer>
 	</body>
 </html>
