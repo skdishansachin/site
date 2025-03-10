@@ -1,6 +1,6 @@
 ---
 import "@fontsource-variable/geist";
-import "@fontsource-variable/geist-mono";
+import "@fontsource-variable/jetbrains-mono";
 import "../styles/global.css";
 
 interface Props {
@@ -30,22 +30,21 @@ interface Props {
 			href={`${Astro.site}rss.xml`}
 		/>
 	</head>
-	<body class="antialiased">
+	<body class="antialiased dark:bg-zinc-950 bg-white text-gray-900 dark:text-zinc-200">
 		<div class="max-w-3xl mx-auto pt-0 md:pt-10 p-10">
 			<main>
 				<slot />
 			</main>
 			<footer class="flex justify-between mt-12">
-				<p class="text-gray-800">
+				<p>
 					Credit goes to <a
 						href="https://github.com/pilcrowonpaper"
 						target="_blank"
-						rel="noopener noreferrer"
-						class="text-gray-800">pilcrow</a>
+						rel="noopener noreferrer">pilcrow</a>
 				</p>
 				<a
 					href="https://github.com/skdishansachin/site"
-					class="text-gray-800">Source code</a
+					>Source code</a
 				>
 			</footer>
 		</div>

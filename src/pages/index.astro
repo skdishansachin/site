@@ -10,27 +10,38 @@ const posts = await getCollection("post", ({ data }) => {
 ---
 
 <Layout title="Dishan Sachin" description="Dishan Sachin's personal website">
-	<h1 class="text-2xl tracking-tight font-bold pt-12 text-gray-800">Dishan Sachin</h1>
-	<p class="mt-4 text-gray-800">
-		
-	</p>
-	<p class="mt-4 text-gray-800">
-		You can find me on <a href="https://github.com/skdishansachin">GitHub</a>, and <a href="https://bsky.app/profile/skdishansachin.bsky.social">BlueSky</a>. You can also email me at <a href="#">someone@example.com</a>.
+	<h1 class="text-xl tracking-tight font-medium pt-12">Dishan Sachin</h1>
+	<div class="mt-4">
+		I'm a backend developer and a student at the Java Institute of Advanced
+		Technology. I spend most of my time writing backend code with Java and
+		Kotlin. I also contribute to open-source projects. In my spare time, I
+		write articles that help others learn about programming and technology.
+	</div>
+	<p class="mt-4">
+		You can find me on <a href="https://github.com/skdishansachin">GitHub</a
+		>, and <a href="https://bsky.app/profile/skdishansachin.bsky.social"
+			>BlueSky</a
+		>. Feel free to reach out to me on <a
+			href="mailto:dishansacin99@gmail.com">Email</a
+		>.
 	</p>
 	{
 		posts.length > 0 && (
 			<section class="mt-8 mb-3">
-				<h1 class="text-2xl tracking-tight font-bold text-gray-800">Blog</h1>
+				<h1 class="text-xl tracking-tight font-medium">Blog</h1>
 				<div class="mt-4 flex flex-col space-y-4">
 					{posts.map((post) => {
 						return (
 							<article class="flex justify-between">
 								<h3>
-									<a href={`/blog/${post.id}`} class="text-gray-800">
+									<a
+										href={`/blog/${post.id}`}
+										class="dark:text-gray-400"
+									>
 										{limit(post.data.title)}
 									</a>
 								</h3>
-								<p class="text-sm text-gray-800">
+								<p class="text-sm dark:text-gray-400">
 									{date(post.data.date)}
 								</p>
 							</article>

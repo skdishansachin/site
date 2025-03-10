@@ -1,7 +1,6 @@
 ---
 import { getCollection, render } from "astro:content";
 import Layout from "@/components/Layout.astro";
-import { date } from "@/utils";
 
 export async function getStaticPaths() {
 	const posts = await getCollection("post", ({ data }) => {
@@ -19,14 +18,8 @@ const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title}>
-	<h1 class="text-2xl tracking-tight font-bold pt-12 text-gray-800">
-		{post.data.title}
-	</h1>
-	<p class="mt-4 text-lg text-gray-800">
-		{date(post.data.date)}
-	</p>
-	<a href="/" class="mt-4 text-lg text-gray-800">Go back</a>
-	<div class="mt-10 leading-relaxed prose-base prose-gray">
+	<a href="/">Go back</a>
+	<div class="mt-10 prose prose-gray text-gray-800 dark:text-zinc-200 dark:prose-invert">
 		<Content />
 	</div>
 </Layout>
